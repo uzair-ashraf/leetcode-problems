@@ -1,0 +1,24 @@
+{
+  "name": "leetcode-problems",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "mocha || exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uzair-ashraf/leetcode-problems.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/uzair-ashraf/leetcode-problems/issues"
+  },
+  "homepage": "https://github.com/uzair-ashraf/leetcode-problems#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.2.2"
+  }
+}
