@@ -1,6 +1,7 @@
 const { expect } = require('chai');
 const {
-  twoSum
+  twoSum,
+  defangIPaddr
 } = require('../main');
 
   describe('twoSums', () => {
@@ -11,5 +12,15 @@ const {
     it('should return [1, 2]', () => {
       const result = twoSum([3,2,4], 6);
       expect(result).to.eql([1,2])
+    })
+  })
+  describe('deFang IP Address', () => {
+    it('should return "1[.]1[.]1[.]1"', () => {
+      const result = defangIPaddr("1.1.1.1");
+      expect(result).to.equal("1[.]1[.]1[.]1")
+    })
+    it('should return "192[.]168[.]1[.]1"', () => {
+      const result = defangIPaddr("192.168.1.1");
+      expect(result).to.equal("192[.]168[.]1[.]1")
     })
   })

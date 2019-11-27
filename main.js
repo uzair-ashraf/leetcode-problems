@@ -26,8 +26,11 @@
   })
 };
 
-twoSum([3,2,4], 6);
+const defangIPaddr = function (address) {
+  return address.split(".").join("[.]")
+};
 
 module.exports = {
-  twoSum
+  twoSum,
+  defangIPaddr
 }
