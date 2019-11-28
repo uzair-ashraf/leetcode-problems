@@ -1,7 +1,8 @@
 const { expect } = require('chai');
 const {
   twoSum,
-  defangIPaddr
+  defangIPaddr,
+  balancedStringSplit
 } = require('../main');
 
   describe('twoSums', () => {
@@ -23,4 +24,23 @@ const {
       const result = defangIPaddr("192.168.1.1");
       expect(result).to.equal("192[.]168[.]1[.]1")
     })
+  })
+  describe('balancedStringSplit', () => {
+    it('should return 4', () => {
+      const result = balancedStringSplit("RLRRLLRLRL");
+      expect(result).to.equal(4)
+    })
+    it('should return 3', () => {
+      const result = balancedStringSplit("RLLLLRRRLR");
+      expect(result).to.equal(3)
+    })
+    it('should return 1', () => {
+      const result = balancedStringSplit("LLLLRRRR");
+      expect(result).to.equal(1)
+    })
+    it('should return 2', () => {
+      const result = balancedStringSplit("RLRRRLLRLL");
+      expect(result).to.equal(2)
+    })
+
   })

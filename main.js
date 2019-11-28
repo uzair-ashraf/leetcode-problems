@@ -29,8 +29,20 @@
 const defangIPaddr = function (address) {
   return address.split(".").join("[.]")
 };
+const balancedStringSplit = function (s) {
+  let count = 0;
+  const L = [];
+  const R = [];
+  for (let i = 0; i < s.length; i++) {
+    if (s[i] === 'L') L.push(s[i])
+    if (s[i] === 'R') R.push(s[i])
+    if (L.length === R.length) count++
+  }
+  return count
+};
 
 module.exports = {
   twoSum,
-  defangIPaddr
+  defangIPaddr,
+  balancedStringSplit
 }
